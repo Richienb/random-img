@@ -1,8 +1,8 @@
 {
-	"name": "the-module",
+	"name": "random-img",
 	"version": "0.0.0",
-	"description": "My awesome module.",
-	"repository": "https://github.com/Richienb/the-module.git",
+	"description": "Get a random Unsplash image.",
+	"repository": "https://github.com/Richienb/random-img.git",
 	"author": "Richie Bendall <richiebendall@gmail.com>",
 	"license": "MIT",
 	"main": "index.js",
@@ -17,11 +17,29 @@
 		"lint": "xo",
 		"test": "yarn lint && ava"
 	},
-	"keywords": [],
-	"dependencies": {},
+	"keywords": [
+		"random",
+		"img",
+		"image",
+		"pixel",
+		"unsplash",
+		"get",
+		"fetch",
+		"http",
+		"https",
+		"api",
+		"random",
+		"choice"
+	],
+	"dependencies": {
+		"ky": "^0.18.0",
+		"ky-universal": "^0.5.0"
+	},
 	"devDependencies": {
 		"ava": "^3.3.0",
 		"eslint-config-richienb": "^0.3.0",
+		"file-type": "^14.1.3",
+		"is-array-buffer": "^1.0.1",
 		"xo": "^0.26.1"
 	},
 	"resolutions": {

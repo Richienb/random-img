@@ -1,14 +1,16 @@
 /**
- * My awesome module.
- * @param input Lorem ipsum.
- * @param postfix Lorem ipsum.
+ * Get a random Unsplash image.
  * @example
  * ```
- * const theModule = require("the-module");
- * theModule("unicorns");
- * //=> 'unicorns & rainbows'
+ * const randomImg = require(".");
+ * const fs = require("fs").promises;
+ *
+ * (async () => {
+ * 	const image = await randomImg();
+ * 	await fs.writeFile("file.jpg", Buffer.from(image));
+ * })()
  * ```
 */
-declare function theModule(input: string, { postfix }: { postfix?: string }): string;
+declare async function randomImg(): Promise<ArrayBuffer>
 
-export = theModule;
+export = randomImg

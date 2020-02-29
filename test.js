@@ -1,13 +1,11 @@
 const test = require("ava")
-const theModule = require(".")
+const isArrayBuffer = require("is-array-buffer")
+const fileType = require("file-type")
+const randomImg = require(".")
 
-test("main", (t) => {
-	t.throws(() => {
-		theModule(123)
-	}, {
-		instanceOf: TypeError,
-		message: "Expected a string, got number",
-	})
+test("main", async (t) => {
+	const image = await randomImg()
 
-	t.is(theModule("unicorns"), "unicorns & rainbows")
+	t.true(isArrayBuffer(image))
+	t.deepEqual(await fileType.fromBuffer(Buffer.from(image)), { ext: "jpg", mime: "image/jpeg" })
 })
