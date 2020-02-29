@@ -1,6 +1,6 @@
 {
 	"name": "random-img",
-	"version": "0.0.0",
+	"version": "1.0.0",
 	"description": "Get a random Unsplash image.",
 	"repository": "https://github.com/Richienb/random-img.git",
 	"author": "Richie Bendall <richiebendall@gmail.com>",
